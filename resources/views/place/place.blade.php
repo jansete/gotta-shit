@@ -15,7 +15,7 @@
                 <ul>
                     @if(! $place->trashed())
                         <li>
-                            <a  class="button button-action" href="{{ route('place.edit', ['language' => App::getLocale(), 'place' => $place->id]) }}">{{ trans('gottashit.place.edit_place') }}</a>
+                            <a  class="button button-action" href="{{ route('place.edit', ['language' => App::getLocale(), 'place' => $place->id]) }}">{{ trans('pokemonbuddy.place.edit_place') }}</a>
                         </li>
                     @else
                         <li>
@@ -23,7 +23,7 @@
                                 {!! csrf_field() !!}
                                 <input name="_method" type="hidden" value="POST">
                                 <button class="button button-action" type="submit">
-                                        {{ trans('gottashit.place.restore_place') }}
+                                        {{ trans('pokemonbuddy.place.restore_place') }}
                                 </button>
                             </form>
                         </li>
@@ -34,9 +34,9 @@
                             <input name="_method" type="hidden" value="DELETE">
                             <button class="button button-action button-delete-place" type="submit" id="delete-place-{{ $place->id }}">
                                 @if($place->trashed())
-                                    {{ trans('gottashit.place.delete_place_permanently') }}
+                                    {{ trans('pokemonbuddy.place.delete_place_permanently') }}
                                 @else
-                                    {{ trans('gottashit.place.delete_place') }}
+                                    {{ trans('pokemonbuddy.place.delete_place') }}
                                 @endif
                             </button>
                         </form>
@@ -54,7 +54,7 @@
                                 {!! csrf_field() !!}
                                 <input name="_method" type="hidden" value="PUT">
                                 @include('place.partials.form_stars')
-                                <button class="button button-rate button-rate-this" type="submit">{{ trans('gottashit.star.rate_place') }}</button>
+                                <button class="button button-rate button-rate-this" type="submit">{{ trans('pokemonbuddy.star.rate_place') }}</button>
                             </form>
                         </li>
 
@@ -75,7 +75,7 @@
                 <div class="place-stars-points" id="place-stars-points-{{ $place->id }}">
                 </div>
             </div>
-            <div class="place-stars-text">{{ $place->stars_average }} / {{ trans('gottashit.star.votes') }}: {{ $place->stars_amount }}</div>
+            <div class="place-stars-text">{{ $place->stars_average }} / {{ trans('pokemonbuddy.star.votes') }}: {{ $place->stars_amount }}</div>
         </div>
         <div class="place-comments">
              <div class="place-comments-number">
@@ -96,7 +96,7 @@
                         </div>
                     @endif
                 @endif
-                <p>{{ trans_choice('gottashit.comment.comments', $place->numberOfComments, ['number_of_comments' => $place->numberOfComments]) }}</p>
+                <p>{{ trans_choice('pokemonbuddy.comment.comments', $place->numberOfComments, ['number_of_comments' => $place->numberOfComments]) }}</p>
             </div>
 
             <div id="place-comments-list">
@@ -111,7 +111,7 @@
                             {!! csrf_field() !!}
                             <div>
                                 <label class="input-label" for="comment">
-                                    {{ trans('gottashit.comment.create_comment_label') }}
+                                    {{ trans('pokemonbuddy.comment.create_comment_label') }}
                                 </label>
                                 @if(old('comment') != "")
                                     <textarea class="textarea" name="comment" id="comment-textarea">{{ old('comment') }}</textarea>
@@ -121,7 +121,7 @@
                             </div>
 
                             <div>
-                                <button class="button button-create-comment" type="submit">{{ trans('gottashit.comment.create_comment') }}</button>
+                                <button class="button button-create-comment" type="submit">{{ trans('pokemonbuddy.comment.create_comment') }}</button>
                             </div>
                         </form>
                     </div>

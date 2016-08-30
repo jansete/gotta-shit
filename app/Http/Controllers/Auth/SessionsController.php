@@ -1,8 +1,8 @@
 <?php
 
-namespace GottaShit\Http\Controllers\Auth;
+namespace PokemonBuddy\Http\Controllers\Auth;
 
-use GottaShit\Http\Controllers\Controller;
+use PokemonBuddy\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -31,7 +31,7 @@ class SessionsController extends Controller
     {
         $this->setLanguage($language);
 
-        $title = trans('gottashit.title.login');
+        $title = trans('pokemonbuddy.title.login');
 
         return view('auth.login', compact('title'));
     }

@@ -40,10 +40,10 @@ return [
     ',
 
     'email' => [
-        'confirm_email_subject' => 'Confirma tu correo electrónico para GottaShit.com',
-        'confirm_email_new_subject' => 'Confirma tu nueva dirección de correo electrónico para GottaShit.com',
-        'reset_password_subject' => 'Resetea tu clave para GottaShit.com',
-        'confirm_email_thanks'  => '¡Gracias por formar parte de GottaShit.com!',
+        'confirm_email_subject' => 'Confirma tu correo electrónico para PokemonBuddy.com',
+        'confirm_email_new_subject' => 'Confirma tu nueva dirección de correo electrónico para PokemonBuddy.com',
+        'reset_password_subject' => 'Resetea tu clave para PokemonBuddy.com',
+        'confirm_email_thanks'  => '¡Gracias por formar parte de PokemonBuddy.com!',
         'confirm_email_action' => "Un último paso. Necesitamos que <a href=':path'>confirmes tu dirección de correo electrónico</a>.",
         'reset_password_thanks' => 'Nos has pedido resetear tu clave',
         'reset_password_action' => "<a href=':path'>Haz click aquí</a> para resetear tu clave: <a href=':path'>Resetear mi clave</a>",

@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => GottaShit\Entities\User::class,
+        'model'  => PokemonBuddy\Entities\User::class,
         'key' => '',
         'secret' => '',
     ],

@@ -1,7 +1,7 @@
 <div>
 
     <label class="input-label" for="full_name">
-        {{ ucfirst(trans('gottashit.user.full_name')) }}
+        {{ ucfirst(trans('pokemonbuddy.user.full_name')) }}
     </label>
 
     @if(old('full_name') != "")
@@ -16,7 +16,7 @@
 <div>
 
     <label class="input-label" for="username">
-        {{ ucfirst(trans('gottashit.user.username')) }}
+        {{ ucfirst(trans('pokemonbuddy.user.username')) }}
     </label>
 
     @if(old('username') != "")
@@ -32,7 +32,7 @@
 <div>
 
     <label class="input-label" for="email">
-        {{ ucfirst(trans('gottashit.user.email')) }}
+        {{ ucfirst(trans('pokemonbuddy.user.email')) }}
     </label>
 
     @if(old('email') != "")
@@ -48,7 +48,7 @@
 <div>
 
     <label class="input-label" for="password">
-        {{ ucfirst(trans('gottashit.user.password')) }}
+        {{ ucfirst(trans('pokemonbuddy.user.password')) }}
     </label>
 
     <input class="input" type="password" name="password" id="password">
@@ -58,7 +58,7 @@
 <div>
 
     <label class="input-label" for="password_confirmation">
-        {{ ucfirst(trans('gottashit.user.confirm_password')) }}
+        {{ ucfirst(trans('pokemonbuddy.user.confirm_password')) }}
     </label>
 
     <input class="input" type="password" name="password_confirmation" id="password_confirmation">

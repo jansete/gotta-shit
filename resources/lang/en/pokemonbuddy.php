@@ -40,9 +40,9 @@ return [
     ',
 
     'email' => [
-        'confirm_email_subject' => 'Confirm your email for GottaShit.com',
-        'confirm_email_new_subject' => 'Confirm your new email for GottaShit.com',
-        'reset_password_subject' => 'Reset your password for GottaShit.com',
+        'confirm_email_subject' => 'Confirm your email for PokemonBuddy.com',
+        'confirm_email_new_subject' => 'Confirm your new email for PokemonBuddy.com',
+        'reset_password_subject' => 'Reset your password for PokemonBuddy.com',
         'confirm_email_thanks'  => 'Thanks for signing up!',
         'confirm_email_action' => "We just need you to <a href=':path'>confirm your email address</a> real quick!",
         'reset_password_thanks' => 'You can restart your password',

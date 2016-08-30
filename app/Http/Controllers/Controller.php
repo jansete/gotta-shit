@@ -1,8 +1,8 @@
 <?php
 
-namespace GottaShit\Http\Controllers;
+namespace PokemonBuddy\Http\Controllers;
 
-use GottaShit\Entities\User;
+use PokemonBuddy\Entities\User;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;

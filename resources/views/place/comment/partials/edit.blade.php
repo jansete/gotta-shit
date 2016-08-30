@@ -14,7 +14,7 @@
             <input name="_method" type="hidden" value="PUT">
             @include('place.partials.comments')
             <div>
-                <button class="button button-create-comment" type="submit">{{ ucfirst(trans('gottashit.comment.update_comment')) }}</button>
+                <button class="button button-create-comment" type="submit">{{ ucfirst(trans('pokemonbuddy.comment.update_comment')) }}</button>
             </div>
         </form>
     </div>

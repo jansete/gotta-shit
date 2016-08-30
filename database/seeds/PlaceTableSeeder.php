@@ -15,6 +15,6 @@ class PlaceTableSeeder extends Seeder
     {
         $placesAmount = $this->databaseSeeder->getPlacesAmount();
 
-        factory('GottaShit\Entities\Place', $placesAmount)->create();
+        factory('PokemonBuddy\Entities\Place', $placesAmount)->create();
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Jobs;
+namespace PokemonBuddy\Jobs;
 
 use Illuminate\Bus\Queueable;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace GottaShit\Http\Controllers;
+namespace PokemonBuddy\Http\Controllers;
 
-use GottaShit\Entities\Place;
-use GottaShit\Entities\PlaceComment;
-use GottaShit\Entities\PlaceStar;
-use GottaShit\Entities\Subscription;
-use GottaShit\Entities\User;
-use GottaShit\Http\Requests;
-use GottaShit\Http\Controllers\Controller;
-use GottaShit\Mailers\AppMailer;
+use PokemonBuddy\Entities\Place;
+use PokemonBuddy\Entities\PlaceComment;
+use PokemonBuddy\Entities\PlaceStar;
+use PokemonBuddy\Entities\Subscription;
+use PokemonBuddy\Entities\User;
+use PokemonBuddy\Http\Requests;
+use PokemonBuddy\Http\Controllers\Controller;
+use PokemonBuddy\Mailers\AppMailer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -37,7 +37,7 @@ class PlaceController extends Controller
 
         $places = Place::paginate(8);
 
-        $title = trans('gottashit.title.all_places');
+        $title = trans('pokemonbuddy.title.all_places');
 
         return view('places', compact('title', 'places'));
     }
@@ -51,7 +51,7 @@ class PlaceController extends Controller
     {
         $this->setLanguage($language);
 
-        $title = trans('gottashit.title.create_place');
+        $title = trans('pokemonbuddy.title.create_place');
 
         return view('place.create', compact('title'));
     }
@@ -97,9 +97,9 @@ class PlaceController extends Controller
         $subscription->save();
 
         $mailer->sendPlaceAddNotification(Auth::user(), $place,
-            trans('gottashit.email.new_place_add'));
+            trans('pokemonbuddy.email.new_place_add'));
 
-        $status_message = trans('gottashit.place.created_place',
+        $status_message = trans('pokemonbuddy.place.created_place',
             ['place' => $place->name]);
 
         return redirect(route('place.show',
@@ -154,7 +154,7 @@ class PlaceController extends Controller
 
         $place = Place::findOrFail($id);
 
-        $title = trans('gottashit.title.edit_place', ['place' => $place->name]);
+        $title = trans('pokemonbuddy.title.edit_place', ['place' => $place->name]);
 
         return view('place.edit', compact('title', 'place'));
     }
@@ -202,7 +202,7 @@ class PlaceController extends Controller
 
             $star->save();
 
-            $status_message = trans('gottashit.place.updated_place',
+            $status_message = trans('pokemonbuddy.place.updated_place',
                 ['place' => $place->name]);
 
             return redirect(route('place.show',
@@ -212,7 +212,7 @@ class PlaceController extends Controller
                 ]))->with('status',
                 $status_message);
         } else {
-            $status_message = trans('gottashit.place.update_place_not_allowed',
+            $status_message = trans('pokemonbuddy.place.update_place_not_allowed',
                 ['place' => $place->name]);
 
             return redirect(route('home',
@@ -233,11 +233,11 @@ class PlaceController extends Controller
         $place = Place::withTrashed()->findOrFail($id);
 
         if ($place->isAuthor) {
-            $status_message = trans('gottashit.place.deleted_place',
+            $status_message = trans('pokemonbuddy.place.deleted_place',
                 ['place' => $place->name]);
 
             if ($place->trashed()) {
-                $status_message = trans('gottashit.place.deleted_place_permanently',
+                $status_message = trans('pokemonbuddy.place.deleted_place_permanently',
                     ['place' => $place->name]);
                 $place->forceDelete();
             } else {
@@ -247,7 +247,7 @@ class PlaceController extends Controller
             return redirect(route('user_places',
                 ['language' => $language]))->with('status', $status_message);
         } else {
-            $status_message = trans('gottashit.place.delete_place_not_allowed',
+            $status_message = trans('pokemonbuddy.place.delete_place_not_allowed',
                 ['place' => $place->name]);
 
             return redirect(route('home',
@@ -264,7 +264,7 @@ class PlaceController extends Controller
         if ($place->isAuthor) {
             $place->restore();
 
-            $status_message = trans('gottashit.place.restored_place',
+            $status_message = trans('pokemonbuddy.place.restored_place',
                 ['place' => $place->name]);
 
             return redirect(route('place.show',
@@ -274,7 +274,7 @@ class PlaceController extends Controller
                 ]))->with('status',
                 $status_message);
         } else {
-            $status_message = trans('gottashit.place.restore_place_not_allowed',
+            $status_message = trans('pokemonbuddy.place.restore_place_not_allowed',
                 ['place' => $place->name]);
 
             return redirect(route('home',
@@ -297,7 +297,7 @@ class PlaceController extends Controller
             $places = Place::paginate(8);
         }
 
-        $title = trans('gottashit.title.user_places');
+        $title = trans('pokemonbuddy.title.user_places');
 
         return view('places', compact('title', 'places'));
     }
@@ -313,7 +313,7 @@ class PlaceController extends Controller
             ->orderBy('star_average', 'desc')
             ->paginate(8);
 
-        $title = trans('gottashit.title.best_places');
+        $title = trans('pokemonbuddy.title.best_places');
 
         return view('places', compact('title', 'places'));
     }
@@ -350,7 +350,7 @@ class PlaceController extends Controller
                 array($longitude - $deltaLng, $longitude + $deltaLng))
             ->paginate(8);
 
-        $title = trans('gottashit.title.nearest_places');
+        $title = trans('pokemonbuddy.title.nearest_places');
 
         return view('places', compact('title', 'places'));
     }

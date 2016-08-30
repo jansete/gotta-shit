@@ -20,7 +20,7 @@
             @include('auth.partials.user_form')
 
             <div>
-                <button class="button" type="submit">{{ ucfirst(trans('gottashit.user.update_user')) }}</button>
+                <button class="button" type="submit">{{ ucfirst(trans('pokemonbuddy.user.update_user')) }}</button>
             </div>
         </form>
     </div>

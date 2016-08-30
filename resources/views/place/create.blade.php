@@ -16,12 +16,12 @@
             {!! csrf_field() !!}
             @include('place.partials.form_place')
             <div>
-                <button class="button" type="submit">{{ ucfirst(trans('gottashit.place.create_place')) }}</button>
+                <button class="button" type="submit">{{ ucfirst(trans('pokemonbuddy.place.create_place')) }}</button>
             </div>
         </form>
     </div>
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('/js/gottashit_place_field.js') }}"></script>
+    <script src="{{ asset('/js/pokemonbuddy_place_field.js') }}"></script>
 @endsection

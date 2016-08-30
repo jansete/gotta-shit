@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Entities;
+namespace PokemonBuddy\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -39,7 +39,7 @@ class Place extends Model
      */
     public function user()
     {
-        return $this->hasOne('GottaShit\Entities\User');
+        return $this->hasOne('PokemonBuddy\Entities\User');
     }
 
     /**
@@ -49,7 +49,7 @@ class Place extends Model
      */
     public function stars()
     {
-        return $this->hasMany('GottaShit\Entities\PlaceStar');
+        return $this->hasMany('PokemonBuddy\Entities\PlaceStar');
     }
 
     /**
@@ -59,7 +59,7 @@ class Place extends Model
      */
     public function comments()
     {
-        return $this->hasMany('GottaShit\Entities\PlaceComment');
+        return $this->hasMany('PokemonBuddy\Entities\PlaceComment');
     }
 
     /**
@@ -69,7 +69,7 @@ class Place extends Model
      */
     public function subscriptions()
     {
-        return $this->hasMany('GottaShit\Entities\Subscription');
+        return $this->hasMany('PokemonBuddy\Entities\Subscription');
     }
 
     public static function boot()

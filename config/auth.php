@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => GottaShit\Entities\User::class,
+    'model' => PokemonBuddy\Entities\User::class,
 
     /*
     |--------------------------------------------------------------------------

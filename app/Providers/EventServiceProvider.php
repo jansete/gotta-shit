@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Providers;
+namespace PokemonBuddy\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'GottaShit\Events\SomeEvent' => [
-            'GottaShit\Listeners\EventListener',
+        'PokemonBuddy\Events\SomeEvent' => [
+            'PokemonBuddy\Listeners\EventListener',
         ],
     ];
 

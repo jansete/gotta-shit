@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Entities;
+namespace PokemonBuddy\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -39,7 +39,7 @@ class Subscription extends Model
      */
     public function user()
     {
-        return $this->belongsTo('GottaShit\Entities\User');
+        return $this->belongsTo('PokemonBuddy\Entities\User');
     }
 
     /**
@@ -49,6 +49,6 @@ class Subscription extends Model
      */
     public function place()
     {
-        return $this->belongsTo('GottaShit\Entities\Place');
+        return $this->belongsTo('PokemonBuddy\Entities\Place');
     }
 }

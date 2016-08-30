@@ -15,15 +15,15 @@
 
 
         <div>
-            <a class="button" href="{{ route('social_login', ['provider' => 'facebook']) }}">{{ trans('gottashit.user.login_facebook') }}</a>
+            <a class="button" href="{{ route('social_login', ['provider' => 'facebook']) }}">{{ trans('pokemonbuddy.user.login_facebook') }}</a>
         </div>
 
         <div>
-            <a class="button" href="{{ route('social_login', ['provider' => 'twitter']) }}">{{ trans('gottashit.user.login_twitter') }}</a>
+            <a class="button" href="{{ route('social_login', ['provider' => 'twitter']) }}">{{ trans('pokemonbuddy.user.login_twitter') }}</a>
         </div>
 
         <div>
-            <a class="button" href="{{ route('social_login', ['provider' => 'github']) }}">{{ trans('gottashit.user.login_github') }}</a>
+            <a class="button" href="{{ route('social_login', ['provider' => 'github']) }}">{{ trans('pokemonbuddy.user.login_github') }}</a>
         </div>
 
         <form method="POST" action="{{ route('user_register', ['language' => App::getLocale()]) }}">
@@ -32,7 +32,7 @@
             @include('auth.partials.user_form')
 
             <div>
-                <button class="button" type="submit">{{ ucfirst(trans('gottashit.user.register')) }}</button>
+                <button class="button" type="submit">{{ ucfirst(trans('pokemonbuddy.user.register')) }}</button>
             </div>
         </form>
     </div>

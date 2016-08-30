@@ -11,7 +11,6 @@
         "aws/aws-sdk-php": "~3.0",
         "doctrine/dbal": "2.5.1",
         "laravel/socialite": "^3.0@dev",
-        "dingo/api": "1.0.*@dev",
         "laravelcollective/html": "5.1.*"
     },
     "require-dev": {
@@ -25,7 +24,7 @@
             "database"
         ],
         "psr-4": {
-            "GottaShit\\": "app/"
+            "PokemonBuddy\\": "app/"
         }
     },
     "autoload-dev": {

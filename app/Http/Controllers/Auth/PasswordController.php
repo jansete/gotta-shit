@@ -1,8 +1,8 @@
 <?php
 
-namespace GottaShit\Http\Controllers\Auth;
+namespace PokemonBuddy\Http\Controllers\Auth;
 
-use GottaShit\Http\Controllers\Controller;
+use PokemonBuddy\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -49,7 +49,7 @@ class PasswordController extends Controller
     {
         $this->setLanguage($language);
 
-        $this->subject = trans('gottashit.email.reset_password_subject');
+        $this->subject = trans('pokemonbuddy.email.reset_password_subject');
 
         return $this->postEmail($request);
     }

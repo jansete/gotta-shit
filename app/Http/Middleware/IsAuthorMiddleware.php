@@ -1,8 +1,8 @@
 <?php
 
-namespace GottaShit\Http\Middleware;
+namespace PokemonBuddy\Http\Middleware;
 
-use GottaShit\Entities\Place;
+use PokemonBuddy\Entities\Place;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
 use Closure;
@@ -24,7 +24,7 @@ class IsAuthorMiddleware
         if (Auth::check()) {
             $user_id = Auth::user()->id;
             if ($user_id != $author_id) {
-                $status_message = trans('gottashit.place.edit_place_not_allowed',
+                $status_message = trans('pokemonbuddy.place.edit_place_not_allowed',
                     ['place' => $place->name]);
 
                 return redirect(route('home',
@@ -32,7 +32,7 @@ class IsAuthorMiddleware
                     $status_message);
             }
         } else {
-            $status_message = trans('gottashit.place.edit_place_not_allowed',
+            $status_message = trans('pokemonbuddy.place.edit_place_not_allowed',
                 ['place' => $place->name]);
 
             return redirect(route('home',

@@ -6,18 +6,18 @@ $('.place-comments-number').on('click', '.button-subscribe', subscribe);
 $('.place-comments').on('click', '.button-create-comment', create_update_comment);
 
 function delete_place_confirm(e){
-    if ($(this).html() !== GottaShit.messages.delete_place_confirm) {
+    if ($(this).html() !== PokemonBuddy.messages.delete_place_confirm) {
         e.preventDefault();
         $(this).addClass('red');
-        $(this).text(GottaShit.messages.delete_place_confirm);
+        $(this).text(PokemonBuddy.messages.delete_place_confirm);
     }
 }
 
 function delete_comment_confirm(e){
-    if ($(this).html() !== GottaShit.messages.delete_comment_confirm) {
+    if ($(this).html() !== PokemonBuddy.messages.delete_comment_confirm) {
         e.preventDefault();
         $(this).addClass('red');
-        $(this).text(GottaShit.messages.delete_comment_confirm);
+        $(this).text(PokemonBuddy.messages.delete_comment_confirm);
     }
     else {
         e.preventDefault();

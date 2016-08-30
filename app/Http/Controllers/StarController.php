@@ -1,11 +1,11 @@
 <?php
 
-namespace GottaShit\Http\Controllers;
+namespace PokemonBuddy\Http\Controllers;
 
-use GottaShit\Entities\Place;
-use GottaShit\Entities\PlaceStar;
-use GottaShit\Http\Requests;
-use GottaShit\Http\Controllers\Controller;
+use PokemonBuddy\Entities\Place;
+use PokemonBuddy\Entities\PlaceStar;
+use PokemonBuddy\Http\Requests;
+use PokemonBuddy\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
@@ -104,7 +104,7 @@ class StarController extends Controller
 
         $star->save();
 
-        $status_message = trans('gottashit.star.rated',
+        $status_message = trans('pokemonbuddy.star.rated',
             ['place' => $place->name]);
 
         if ($request->ajax()) {
@@ -112,7 +112,7 @@ class StarController extends Controller
                 'status' => 200,
                 'status_message' => $status_message,
                 'star_width' => $place->stars_progress_bar,
-                'star_text' => $place->stars_average . ' / ' . trans('gottashit.star.votes') . ': ' . $place->stars_amount,
+                'star_text' => $place->stars_average . ' / ' . trans('pokemonbuddy.star.votes') . ': ' . $place->stars_amount,
                 'button_delete_rate' => view('place.partials.delete_rate',
                     compact('place'))->render(),
             ]);
@@ -144,7 +144,7 @@ class StarController extends Controller
             $star = PlaceStar::findOrFail($idStar);
         }
 
-        $status_message = trans('gottashit.star.deleted_star',
+        $status_message = trans('pokemonbuddy.star.deleted_star',
             ['place' => $place->name]);
 
         $star->forceDelete();
@@ -154,7 +154,7 @@ class StarController extends Controller
                 'status' => 200,
                 'status_message' => $status_message,
                 'star_width' => $place->stars_progress_bar,
-                'star_text' => $place->stars_average . ' / ' . trans('gottashit.star.votes') . ': ' . $place->stars_amount,
+                'star_text' => $place->stars_average . ' / ' . trans('pokemonbuddy.star.votes') . ': ' . $place->stars_amount,
             ]);
         } else {
             return redirect(route('place.show',

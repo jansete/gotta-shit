@@ -1,11 +1,11 @@
 <?php
 
-namespace GottaShit\Http\Controllers;
+namespace PokemonBuddy\Http\Controllers;
 
-use GottaShit\Entities\Place;
-use GottaShit\Entities\Subscription;
-use GottaShit\Http\Requests;
-use GottaShit\Http\Controllers\Controller;
+use PokemonBuddy\Entities\Place;
+use PokemonBuddy\Entities\Subscription;
+use PokemonBuddy\Http\Requests;
+use PokemonBuddy\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
@@ -58,11 +58,11 @@ class SubscriptionController extends Controller
         $place = Place::findOrFail($place_id);
 
         if ($request->getMethod() == "POST") {
-            $status_message = trans('gottashit.subscription.subscribed_place');
+            $status_message = trans('pokemonbuddy.subscription.subscribed_place');
             $view = "place.subscription.remove";
         } else {
             if ($request->getMethod() == "DELETE") {
-                $status_message = trans('gottashit.subscription.unsubscribed_place');
+                $status_message = trans('pokemonbuddy.subscription.unsubscribed_place');
                 $view = "place.subscription.add";
             }
         }

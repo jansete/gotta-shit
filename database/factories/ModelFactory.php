@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(GottaShit\Entities\User::class, function ($faker) {
+$factory->define(PokemonBuddy\Entities\User::class, function ($faker) {
     return [
         'full_name' => $faker->firstName . ' ' . $faker->lastName,
         'username' => $faker->userName,
@@ -23,7 +23,7 @@ $factory->define(GottaShit\Entities\User::class, function ($faker) {
     ];
 });
 
-$factory->defineAs(GottaShit\Entities\User::class, 'admin', function ($faker) {
+$factory->defineAs(PokemonBuddy\Entities\User::class, 'admin', function ($faker) {
     return [
         'full_name' => 'Miguel Manzano',
         'username' => 'mmanzano',
@@ -35,7 +35,7 @@ $factory->defineAs(GottaShit\Entities\User::class, 'admin', function ($faker) {
     ];
 });
 
-$factory->define(GottaShit\Entities\Place::class, function ($faker) {
+$factory->define(PokemonBuddy\Entities\Place::class, function ($faker) {
     $initialLat = 40.5;
     $initialLng = -3.7;
     $deltaMin = -4000;
@@ -49,22 +49,22 @@ $factory->define(GottaShit\Entities\Place::class, function ($faker) {
         'name' => $faker->company,
         'geo_lat' => $latitude,
         'geo_lng' => $longitude,
-        'user_id' => GottaShit\Entities\User::All()->random()->id,
+        'user_id' => PokemonBuddy\Entities\User::All()->random()->id,
     ];
 });
 
-$factory->define(GottaShit\Entities\PlaceStar::class, function ($faker) {
+$factory->define(PokemonBuddy\Entities\PlaceStar::class, function ($faker) {
     return [
-        'user_id' => GottaShit\Entities\User::All()->random()->id,
-        'place_id' => GottaShit\Entities\Place::All()->random()->id,
+        'user_id' => PokemonBuddy\Entities\User::All()->random()->id,
+        'place_id' => PokemonBuddy\Entities\Place::All()->random()->id,
         'stars' => $faker->numberBetween(1, 5),
     ];
 });
 
-$factory->define(GottaShit\Entities\PlaceComment::class, function ($faker) {
+$factory->define(PokemonBuddy\Entities\PlaceComment::class, function ($faker) {
     return [
-        'user_id' => GottaShit\Entities\User::All()->random()->id,
-        'place_id' => GottaShit\Entities\Place::All()->random()->id,
+        'user_id' => PokemonBuddy\Entities\User::All()->random()->id,
+        'place_id' => PokemonBuddy\Entities\Place::All()->random()->id,
         'comment' => $faker->realText(300),
     ];
 });

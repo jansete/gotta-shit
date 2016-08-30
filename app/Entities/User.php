@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Entities;
+namespace PokemonBuddy\Entities;
 
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
@@ -64,7 +64,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     public function places()
     {
-        return $this->hasMany('GottaShit\Entities\Place');
+        return $this->hasMany('PokemonBuddy\Entities\Place');
     }
 
     /**
@@ -74,7 +74,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     public function stars()
     {
-        return $this->hasMany('GottaShit\Entities\PlaceStar');
+        return $this->hasMany('PokemonBuddy\Entities\PlaceStar');
     }
 
     /**
@@ -84,7 +84,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     public function comments()
     {
-        return $this->hasMany('GottaShit\Entities\PlaceComment');
+        return $this->hasMany('PokemonBuddy\Entities\PlaceComment');
     }
 
     /**
@@ -94,7 +94,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     public function subscriptions()
     {
-        return $this->hasMany('GottaShit\Entities\Subscription');
+        return $this->hasMany('PokemonBuddy\Entities\Subscription');
     }
 
     public function StarsForThisPlace()

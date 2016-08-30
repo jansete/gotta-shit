@@ -4,7 +4,7 @@
 </div>
 
 <script>
-    var GottaShit = {
+    var PokemonBuddy = {
         'analytics': '{{ env('GOOGLE_ANALYTICS') !== "" ? env('GOOGLE_ANALYTICS') : 'WithoutIdForGoogleAnalytics' }}',
         'locale': '{{ App::getLocale() }}',
 
@@ -49,9 +49,9 @@
             'latLonInitial': 0,
         @endif
     'messages': {
-            delete_place_confirm: "{!! trans('gottashit.place.delete_place_confirm') !!}",
-            delete_comment_confirm: "{!! trans('gottashit.comment.delete_comment_confirm') !!}",
+            delete_place_confirm: "{!! trans('pokemonbuddy.place.delete_place_confirm') !!}",
+            delete_comment_confirm: "{!! trans('pokemonbuddy.comment.delete_comment_confirm') !!}",
         },
     }
 </script>
-<script src="{{ asset('/js/gottashit.js') }}"></script>
+<script src="{{ asset('/js/pokemonbuddy.js') }}"></script>

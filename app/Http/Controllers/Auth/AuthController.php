@@ -1,8 +1,8 @@
 <?php
 
-namespace GottaShit\Http\Controllers\Auth;
+namespace PokemonBuddy\Http\Controllers\Auth;
 
-use GottaShit\Entities\User;
+use PokemonBuddy\Entities\User;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +14,7 @@ class AuthController extends Controller
      * Redirect the user to the Social authentication page.
      *
      * @param $provider
-     * @return \GottaShit\Http\Controllers\Auth\Response
+     * @return \PokemonBuddy\Http\Controllers\Auth\Response
      */
     public function redirectToProvider($provider)
     {
@@ -25,7 +25,7 @@ class AuthController extends Controller
      * Obtain the user information from Social.
      *
      * @param $provider
-     * @return \GottaShit\Http\Controllers\Auth\Response
+     * @return \PokemonBuddy\Http\Controllers\Auth\Response
      */
     public function handleProviderCallback($provider)
     {

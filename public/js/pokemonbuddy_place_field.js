@@ -8,9 +8,9 @@
     function gmaps_init() {
         // center of the universe
 
-        var lat = GottaShit.lat;
-        var lon = GottaShit.lon;
-        var latLonInitial = GottaShit.latLonInitial;
+        var lat = PokemonBuddy.lat;
+        var lon = PokemonBuddy.lon;
+        var latLonInitial = PokemonBuddy.latLonInitial;
 
         var latlng = new google.maps.LatLng(lat,lon);
 
@@ -239,4 +239,4 @@ function showPosition_field(position){
 }
 
 getLocation_field();
-//# sourceMappingURL=gottashit_place_field.js.map
+//# sourceMappingURL=pokemonbuddy_place_field.js.map

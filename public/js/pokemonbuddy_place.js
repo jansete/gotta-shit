@@ -3,17 +3,17 @@
     function drawing_map(objectNumber){
         var map;
         var element = $(this);
-        if(GottaShit.place !== undefined) {
-            var id = GottaShit.place.id;
-            var lat = parseFloat(GottaShit.place.geo_lat, 6);
-            var lng = parseFloat(GottaShit.place.geo_lng, 6);
-            var width = GottaShit.place.stars_width;
+        if(PokemonBuddy.place !== undefined) {
+            var id = PokemonBuddy.place.id;
+            var lat = parseFloat(PokemonBuddy.place.geo_lat, 6);
+            var lng = parseFloat(PokemonBuddy.place.geo_lng, 6);
+            var width = PokemonBuddy.place.stars_width;
         }
-        else if(GottaShit.places !== undefined){
-            var id = GottaShit.places[objectNumber].id;
-            var lat = parseFloat(GottaShit.places[objectNumber].geo_lat, 6);
-            var lng = parseFloat(GottaShit.places[objectNumber].geo_lng, 6);
-            var width = GottaShit.places[objectNumber].stars_width;
+        else if(PokemonBuddy.places !== undefined){
+            var id = PokemonBuddy.places[objectNumber].id;
+            var lat = parseFloat(PokemonBuddy.places[objectNumber].geo_lat, 6);
+            var lng = parseFloat(PokemonBuddy.places[objectNumber].geo_lng, 6);
+            var width = PokemonBuddy.places[objectNumber].stars_width;
         }
         $("#place-stars-points-" + id).width(width);
         var myLatlng = new google.maps.LatLng(lat,lng);
@@ -54,4 +54,4 @@
         $('.place-map-render').each(drawing_map);
     });
 })(jQuery);
-//# sourceMappingURL=gottashit_place.js.map
+//# sourceMappingURL=pokemonbuddy_place.js.map

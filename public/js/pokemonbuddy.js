@@ -8,7 +8,7 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', GottaShit.analytics, 'auto');
+ga('create', PokemonBuddy.analytics, 'auto');
 ga('send', 'pageview');
 function getLocation() {
     if (navigator.geolocation) {
@@ -17,7 +17,7 @@ function getLocation() {
 }
 
 function showPosition(position){
-    $('#nearest-place').attr("href", '/' + GottaShit.locale + '/place/' + position.coords.latitude + '/' + position.coords.longitude+ '/30000');
+    $('#nearest-place').attr("href", '/' + PokemonBuddy.locale + '/place/' + position.coords.latitude + '/' + position.coords.longitude+ '/30000');
     $('#nearest-place').show();
 }
 
@@ -42,18 +42,18 @@ $('.place-comments-number').on('click', '.button-subscribe', subscribe);
 $('.place-comments').on('click', '.button-create-comment', create_update_comment);
 
 function delete_place_confirm(e){
-    if ($(this).html() !== GottaShit.messages.delete_place_confirm) {
+    if ($(this).html() !== PokemonBuddy.messages.delete_place_confirm) {
         e.preventDefault();
         $(this).addClass('red');
-        $(this).text(GottaShit.messages.delete_place_confirm);
+        $(this).text(PokemonBuddy.messages.delete_place_confirm);
     }
 }
 
 function delete_comment_confirm(e){
-    if ($(this).html() !== GottaShit.messages.delete_comment_confirm) {
+    if ($(this).html() !== PokemonBuddy.messages.delete_comment_confirm) {
         e.preventDefault();
         $(this).addClass('red');
-        $(this).text(GottaShit.messages.delete_comment_confirm);
+        $(this).text(PokemonBuddy.messages.delete_comment_confirm);
     }
     else {
         e.preventDefault();
@@ -229,4 +229,4 @@ function status_message (message) {
     that.fadeIn(1000).delay(1500).fadeOut(1000);
     number_of_message++;
 }
-//# sourceMappingURL=gottashit.js.map
+//# sourceMappingURL=pokemonbuddy.js.map

@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Entities;
+namespace PokemonBuddy\Entities;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
@@ -41,7 +41,7 @@ class PlaceComment extends Model
      */
     public function user()
     {
-        return $this->belongsTo('GottaShit\Entities\User');
+        return $this->belongsTo('PokemonBuddy\Entities\User');
     }
 
     /**
@@ -51,7 +51,7 @@ class PlaceComment extends Model
      */
     public function place()
     {
-        return $this->belongsTo('GottaShit\Entities\Place');
+        return $this->belongsTo('PokemonBuddy\Entities\Place');
     }
 
     public function getIsAuthorAttribute()

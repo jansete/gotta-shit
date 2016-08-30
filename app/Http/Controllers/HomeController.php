@@ -1,11 +1,11 @@
 <?php
 
-namespace GottaShit\Http\Controllers;
+namespace PokemonBuddy\Http\Controllers;
 
-use GottaShit\Entities\Place;
-use GottaShit\Entities\PlaceComment;
-use GottaShit\Entities\PlaceStar;
-use GottaShit\Entities\User;
+use PokemonBuddy\Entities\Place;
+use PokemonBuddy\Entities\PlaceComment;
+use PokemonBuddy\Entities\PlaceStar;
+use PokemonBuddy\Entities\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
 use Illuminate\Support\Facades\Session;
@@ -32,7 +32,7 @@ class HomeController extends Controller
 
         $places = Place::paginate(1);
 
-        $title = trans('gottashit.title.welcome');
+        $title = trans('pokemonbuddy.title.welcome');
 
         return view('home', compact('title', 'places'));
     }
@@ -41,7 +41,7 @@ class HomeController extends Controller
      * Show the application dashboard to the user.
      *
      * @param $language
-     * @return \GottaShit\Http\Controllers\Response
+     * @return \PokemonBuddy\Http\Controllers\Response
      */
     public function index_locale($language)
     {
@@ -49,7 +49,7 @@ class HomeController extends Controller
 
         $places = Place::paginate(1);
 
-        $title = trans('gottashit.title.welcome');
+        $title = trans('pokemonbuddy.title.welcome');
 
         return view('home', compact('title', 'places'));
     }

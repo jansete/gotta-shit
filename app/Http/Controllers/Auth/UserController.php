@@ -1,10 +1,10 @@
 <?php
 
-namespace GottaShit\Http\Controllers\Auth;
+namespace PokemonBuddy\Http\Controllers\Auth;
 
-use GottaShit\Entities\User;
-use GottaShit\Http\Controllers\Controller;
-use GottaShit\Mailers\AppMailer;
+use PokemonBuddy\Entities\User;
+use PokemonBuddy\Http\Controllers\Controller;
+use PokemonBuddy\Mailers\AppMailer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
@@ -24,7 +24,7 @@ class UserController extends Controller
         $user = User::findOrFail($user_id);
         $is_user = $this->is_user($user_id);
 
-        $title = trans('gottashit.title.user_profile',
+        $title = trans('pokemonbuddy.title.user_profile',
             ['user' => $user->username]);
 
         return view('auth.view', compact('title', 'user', 'is_user'));
@@ -37,7 +37,7 @@ class UserController extends Controller
         $user = User::findOrFail($user_id);
 
         if (!$this->is_user($user_id)) {
-            $status_message = trans('gottashit.user.edit_user_not_allowed');
+            $status_message = trans('pokemonbuddy.user.edit_user_not_allowed');
 
             return redirect(route('user.show', [
                 'language' => $language,
@@ -45,7 +45,7 @@ class UserController extends Controller
             ]))->with('status', $status_message);
         }
 
-        $title = trans('gottashit.title.edit_user',
+        $title = trans('pokemonbuddy.title.edit_user',
             ['user' => $user->username]);
 
         return view('auth.edit', compact('title', 'user'));
@@ -63,7 +63,7 @@ class UserController extends Controller
         $status_message = "";
 
         if (!$this->is_user($user_id)) {
-            $status_message = trans('gottashit.user.update_user_not_allowed');
+            $status_message = trans('pokemonbuddy.user.update_user_not_allowed');
 
             return redirect(route('home',
                 ['language' => $language]))->with('status', $status_message);
@@ -93,7 +93,7 @@ class UserController extends Controller
             $user->token = str_random(30);
             $user->modified = true;
             $mailer->sendEmailConfirmationTo($user,
-                trans('gottashit.email.confirm_email_new_subject'));
+                trans('pokemonbuddy.email.confirm_email_new_subject'));
 
             $status_message = trans('auth.confirm_email') . "<br/>";
         }
@@ -108,7 +108,7 @@ class UserController extends Controller
 
         $user->save();
 
-        $status_message .= trans('gottashit.user.updated_user',
+        $status_message .= trans('pokemonbuddy.user.updated_user',
             ['user' => $user->full_name]);
 
         if ($logout) {

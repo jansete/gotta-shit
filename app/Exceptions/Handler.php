@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Exceptions;
+namespace PokemonBuddy\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

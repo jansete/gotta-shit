@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: GottaShit
-        psr4_prefix: GottaShit
+        namespace: PokemonBuddy
+        psr4_prefix: PokemonBuddy
         src_path: app

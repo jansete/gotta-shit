@@ -9,7 +9,7 @@ php:
 
 before_script:
  - mv .travis.env .env
- - mysql -e 'create database gottashit_travis;'
+ - mysql -e 'create database pokemonbuddy_travis;'
  - composer self-update
  - composer install --dev --prefer-source --no-interaction
  - chmod -R 777 storage

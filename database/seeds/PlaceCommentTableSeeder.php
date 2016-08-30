@@ -15,7 +15,7 @@ class PlaceCommentTableSeeder extends Seeder
     {
         $placeCommentsAmount = $this->databaseSeeder->getPlaceCommentsAmount();
 
-        factory('GottaShit\Entities\PlaceComment',
+        factory('PokemonBuddy\Entities\PlaceComment',
             $placeCommentsAmount)->create();
     }
 }

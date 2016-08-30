@@ -1,11 +1,11 @@
 <?php
 
-namespace GottaShit\Mailers;
+namespace PokemonBuddy\Mailers;
 
-use GottaShit\Entities\Place;
-use GottaShit\Entities\PlaceComment;
-use GottaShit\Entities\Subscription;
-use GottaShit\Entities\User;
+use PokemonBuddy\Entities\Place;
+use PokemonBuddy\Entities\PlaceComment;
+use PokemonBuddy\Entities\Subscription;
+use PokemonBuddy\Entities\User;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Support\Facades\App;
 
@@ -142,7 +142,7 @@ class AppMailer
     public function deliver()
     {
         $this->mailer->send($this->view, $this->data, function ($message) {
-            $message->from($this->from, 'GottaShit')
+            $message->from($this->from, 'PokemonBuddy')
                 ->to($this->to)->subject($this->subject);
         });
     }

@@ -40,7 +40,7 @@ class HomeTest extends TestCase
 
     public function test_home_all_user()
     {
-        $user = factory('GottaShit\Entities\User')->create();
+        $user = factory('PokemonBuddy\Entities\User')->create();
 
         $this->actingAs($user)
             ->visit('/en')
@@ -49,7 +49,7 @@ class HomeTest extends TestCase
 
     public function test_home_nearest_user()
     {
-        $user = factory('GottaShit\Entities\User')->create();
+        $user = factory('PokemonBuddy\Entities\User')->create();
 
         $this->actingAs($user)
             ->visit('/en')
@@ -58,7 +58,7 @@ class HomeTest extends TestCase
 
     public function test_home_your_places()
     {
-        $user = factory('GottaShit\Entities\User')->create();
+        $user = factory('PokemonBuddy\Entities\User')->create();
 
         $this->actingAs($user)
             ->visit('/en')
@@ -67,7 +67,7 @@ class HomeTest extends TestCase
 
     public function test_home_add()
     {
-        $user = factory('GottaShit\Entities\User')->create();
+        $user = factory('PokemonBuddy\Entities\User')->create();
 
         $this->actingAs($user)
             ->visit('/en')
@@ -76,7 +76,7 @@ class HomeTest extends TestCase
 
     public function test_home_logout()
     {
-        $user = factory('GottaShit\Entities\User')->create();
+        $user = factory('PokemonBuddy\Entities\User')->create();
 
         $this->actingAs($user)
             ->visit('/en')

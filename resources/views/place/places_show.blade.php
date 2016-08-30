@@ -8,7 +8,7 @@
                     <ul>
                         @if(! $place->trashed())
                             <li>
-                                <a class="button button-card" href="{{ route('place.edit', ['language' => App::getLocale(), 'place' => $place->id]) }}" id="button-edit-card-{{ $place->id }}">{{ trans('gottashit.place.edit_place') }}</a>
+                                <a class="button button-card" href="{{ route('place.edit', ['language' => App::getLocale(), 'place' => $place->id]) }}" id="button-edit-card-{{ $place->id }}">{{ trans('pokemonbuddy.place.edit_place') }}</a>
                             </li>
                         @endif
                         <li>
@@ -17,9 +17,9 @@
                                 <input name="_method" type="hidden" value="DELETE">
                                 <button class="button button-card button-delete-place" type="submit" id="delete-place-{{ $place->id }}">
                                     @if($place->trashed())
-                                        {{ trans('gottashit.place.delete_place_permanently') }}
+                                        {{ trans('pokemonbuddy.place.delete_place_permanently') }}
                                     @else
-                                        {{ trans('gottashit.place.delete_place') }}
+                                        {{ trans('pokemonbuddy.place.delete_place') }}
                                     @endif
                                 </button>
                             </form>
@@ -35,7 +35,7 @@
                     <div class="place-stars-points" id="place-stars-points-{{ $place->id }}">
                     </div>
                 </div>
-                <div class="place-stars-text">{{ $place->stars_average }} / {{ trans('gottashit.star.votes') }}: {{ $place->stars_amount }}</div>
+                <div class="place-stars-text">{{ $place->stars_average }} / {{ trans('pokemonbuddy.star.votes') }}: {{ $place->stars_amount }}</div>
             </div>
             <div class="place-comments card-comments">
                 <p>

@@ -7,7 +7,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://gottashit.app';
+    protected $baseUrl = 'http://pokemonbuddy.app';
 
     /**
      * Creates the application.

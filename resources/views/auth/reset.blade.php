@@ -19,27 +19,27 @@
 
             <div>
                 <label class="input-label" for="email">
-                    {{ ucfirst(trans('gottashit.user.email')) }}
+                    {{ ucfirst(trans('pokemonbuddy.user.email')) }}
                 </label>
                 <input class="input" type="email" name="email" value="{{ old('email') }}" id="email">
             </div>
 
             <div>
                 <label class="input-label" for="password">
-                    {{ ucfirst(trans('gottashit.user.password')) }}
+                    {{ ucfirst(trans('pokemonbuddy.user.password')) }}
                 </label>
                 <input class="input" type="password" name="password" id="password">
             </div>
 
             <div>
                 <label class="input-label" for="password_confirmation">
-                    {{ ucfirst(trans('gottashit.user.confirm_password')) }}
+                    {{ ucfirst(trans('pokemonbuddy.user.confirm_password')) }}
                 </label>
                 <input class="input" type="password" name="password_confirmation" id="password_confirmation">
             </div>
 
             <div>
-                <button class="button" type="submit">{{ ucfirst(trans('gottashit.user.reset_password')) }}</button>
+                <button class="button" type="submit">{{ ucfirst(trans('pokemonbuddy.user.reset_password')) }}</button>
             </div>
         </form>
     </div>

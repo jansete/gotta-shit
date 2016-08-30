@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="disclaimer">
-        <p>{{ trans('gottashit.exception.token') }}</p>
+        <p>{{ trans('pokemonbuddy.exception.token') }}</p>
     </div>
 @endsection

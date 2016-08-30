@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Providers;
+namespace PokemonBuddy\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

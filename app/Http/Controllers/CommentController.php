@@ -1,14 +1,14 @@
 <?php
 
-namespace GottaShit\Http\Controllers;
+namespace PokemonBuddy\Http\Controllers;
 
-use GottaShit\Entities\Place;
-use GottaShit\Entities\PlaceComment;
-use GottaShit\Entities\Subscription;
-use GottaShit\Entities\User;
-use GottaShit\Http\Requests;
-use GottaShit\Http\Controllers\Controller;
-use GottaShit\Mailers\AppMailer;
+use PokemonBuddy\Entities\Place;
+use PokemonBuddy\Entities\PlaceComment;
+use PokemonBuddy\Entities\Subscription;
+use PokemonBuddy\Entities\User;
+use PokemonBuddy\Http\Requests;
+use PokemonBuddy\Http\Controllers\Controller;
+use PokemonBuddy\Mailers\AppMailer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
@@ -47,10 +47,10 @@ class CommentController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  Request $request
-     * @param \GottaShit\Mailers\AppMailer $mailer
+     * @param \PokemonBuddy\Mailers\AppMailer $mailer
      * @param $language
      * @param $id_place
-     * @return \GottaShit\Http\Controllers\Response
+     * @return \PokemonBuddy\Http\Controllers\Response
      */
     public function store(
         Request $request,
@@ -100,7 +100,7 @@ class CommentController extends Controller
                     $this->setLanguageUser($subscriber);
                     $mailer->sendCommentAddNotification($author_of_comment,
                         $subscriber, $place, $comment, $subscription,
-                        trans('gottashit.email.new_comment_add',
+                        trans('pokemonbuddy.email.new_comment_add',
                             ['place' => $place->name]));
                 }
             }
@@ -108,11 +108,11 @@ class CommentController extends Controller
 
         $this->setLanguage($language);
 
-        $status_message = trans('gottashit.comment.created_comment',
+        $status_message = trans('pokemonbuddy.comment.created_comment',
             ['place' => $place->name]);
 
         if ($request->ajax()) {
-            $number_of_comments = trans_choice('gottashit.comment.comments',
+            $number_of_comments = trans_choice('pokemonbuddy.comment.comments',
                 $place->numberOfComments,
                 ['number_of_comments' => $place->numberOfComments]);
 
@@ -158,7 +158,7 @@ class CommentController extends Controller
         $place = Place::findOrFail($id_place);
         $comment = PlaceComment::findOrFail($id_comment);
 
-        $title = trans('gottashit.nav.edit') . $place->name;
+        $title = trans('pokemonbuddy.nav.edit') . $place->name;
 
         if ($request->ajax()) {
             return response()->json([
@@ -195,15 +195,15 @@ class CommentController extends Controller
 
             $comment->save();
 
-            $status_message = trans('gottashit.comment.updated_comment',
+            $status_message = trans('pokemonbuddy.comment.updated_comment',
                 ['place' => $place->name]);
         } else {
-            $status_message = trans('gottashit.comment.update_comment_not_allowed',
+            $status_message = trans('pokemonbuddy.comment.update_comment_not_allowed',
                 ['place' => $place->name]);
         }
 
         if ($request->ajax()) {
-            $number_of_comments = trans_choice('gottashit.comment.comments',
+            $number_of_comments = trans_choice('pokemonbuddy.comment.comments',
                 $place->numberOfComments,
                 ['number_of_comments' => $place->numberOfComments]);
 
@@ -238,17 +238,17 @@ class CommentController extends Controller
         $comment = PlaceComment::findOrFail($id_comment);
 
         if ($comment->isAuthor || $place->isAuthor) {
-            $status_message = trans('gottashit.comment.deleted_comment',
+            $status_message = trans('pokemonbuddy.comment.deleted_comment',
                 ['place' => $place->name]);
 
             $comment->forceDelete();
         } else {
-            $status_message = trans('gottashit.comment.delete_comment_not_allowed',
+            $status_message = trans('pokemonbuddy.comment.delete_comment_not_allowed',
                 ['place' => $place->name]);
         }
 
         if ($request->ajax()) {
-            $number_of_comments = trans_choice('gottashit.comment.comments',
+            $number_of_comments = trans_choice('pokemonbuddy.comment.comments',
                 $place->numberOfComments,
                 ['number_of_comments' => $place->numberOfComments]);
 

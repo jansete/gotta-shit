@@ -3,7 +3,7 @@
 @section('content')
     <div class="home">
         <div class="home-help">
-            {!! trans('gottashit.home') !!}
+            {!! trans('pokemonbuddy.home') !!}
         </div>
         <div class='home-places'>
             @include('place.places_show')
@@ -12,5 +12,5 @@
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('/js/gottashit_place.js') }}"></script>
+    <script src="{{ asset('/js/pokemonbuddy_place.js') }}"></script>
 @endsection

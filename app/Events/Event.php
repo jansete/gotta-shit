@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Events;
+namespace PokemonBuddy\Events;
 
 abstract class Event
 {

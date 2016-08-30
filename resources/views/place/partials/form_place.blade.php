@@ -1,11 +1,11 @@
 <div>
     <label class="input-label" for="name">
-        {{ ucfirst(trans('gottashit.place.name')) }}
+        {{ ucfirst(trans('pokemonbuddy.place.name')) }}
     </label>
     <input class="input" type="name" name="name" @if(old('name') != "") value="{{ old('name') }}" @elseif(isset($place)) value="{{ $place->name }}" @endif id="name">
 </div>
 <div class="my-location">
-    <a class="button" data-latitude="40.5" data-longitude="-3.7" id="get-my-location" style="display:none">{{ trans('gottashit.place.my_location') }}</a>
+    <a class="button" data-latitude="40.5" data-longitude="-3.7" id="get-my-location" style="display:none">{{ trans('pokemonbuddy.place.my_location') }}</a>
 </div>
 <div class="place-map">
     <div class="place-map-form-map" id="place-map"></div>
@@ -22,7 +22,7 @@
 
 <div>
     <label class="input-label" for="stars">
-        {{ ucfirst(trans('gottashit.star.stars')) }}
+        {{ ucfirst(trans('pokemonbuddy.star.stars')) }}
     </label>
     @include('place.partials.form_stars')
 </div>

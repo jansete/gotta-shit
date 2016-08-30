@@ -1,6 +1,6 @@
 <?php
 
-namespace GottaShit\Http\Middleware;
+namespace PokemonBuddy\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

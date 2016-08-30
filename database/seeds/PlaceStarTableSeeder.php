@@ -15,6 +15,6 @@ class PlaceStarTableSeeder extends Seeder
     {
         $placeStarsAmount = $this->databaseSeeder->getPlaceStarsAmount();
 
-        factory('GottaShit\Entities\PlaceStar', $placeStarsAmount)->create();
+        factory('PokemonBuddy\Entities\PlaceStar', $placeStarsAmount)->create();
     }
 }

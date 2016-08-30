@@ -1,10 +1,10 @@
 <?php
 
-namespace GottaShit\Http\Controllers\Auth;
+namespace PokemonBuddy\Http\Controllers\Auth;
 
-use GottaShit\Entities\User;
-use GottaShit\Http\Controllers\Controller;
-use GottaShit\Mailers\AppMailer;
+use PokemonBuddy\Entities\User;
+use PokemonBuddy\Http\Controllers\Controller;
+use PokemonBuddy\Mailers\AppMailer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth as Auth;
@@ -26,7 +26,7 @@ class RegistrationController extends Controller
     {
         $this->setLanguage($language);
 
-        $title = trans('gottashit.title.register');
+        $title = trans('pokemonbuddy.title.register');
 
         return view('auth.register', compact('title'));
     }
@@ -59,7 +59,7 @@ class RegistrationController extends Controller
         ]);
 
         $mailer->sendEmailConfirmationTo($user,
-            trans('gottashit.email.confirm_email_subject'));
+            trans('pokemonbuddy.email.confirm_email_subject'));
 
         $status_message = trans('auth.confirm_email');
 

@@ -11,7 +11,7 @@
 
                 @if($comment->isAuthor)
                 <li>
-                    <a  class="button button-action button-edit-comment" href="{{ route('place.comment.edit', ['language' => App::getLocale(), 'place' => $place->id, 'comment' => $comment->id]) }}">{{ trans('gottashit.comment.edit_comment') }}</a>
+                    <a  class="button button-action button-edit-comment" href="{{ route('place.comment.edit', ['language' => App::getLocale(), 'place' => $place->id, 'comment' => $comment->id]) }}">{{ trans('pokemonbuddy.comment.edit_comment') }}</a>
                 </li>
                 @endif
 
@@ -19,7 +19,7 @@
                     <form method="post" action="{{ route('place.comment.destroy', ['language' => App::getLocale(), 'place' => $place->id, 'comment' => $comment->id]) }}" id='delete-comment-{{ $comment->id }}-form'>
                         {!! csrf_field() !!}
                         <input name="_method" type="hidden" value="DELETE">
-                        <button class="button button-action button-delete-comment" type="submit" id="delete-comment-{{ $comment->id }}">{{ trans('gottashit.comment.delete_comment') }}</button>
+                        <button class="button button-action button-delete-comment" type="submit" id="delete-comment-{{ $comment->id }}">{{ trans('pokemonbuddy.comment.delete_comment') }}</button>
                     </form>
                 </li>
 

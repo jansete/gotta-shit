@@ -1,4 +1,4 @@
-## GottaShit
+## PokemonBuddy
 
 # Travis for Master Branch
 

@@ -140,15 +140,14 @@ return [
         /*
          * Application Service Providers...
          */
-        GottaShit\Providers\AppServiceProvider::class,
-        GottaShit\Providers\EventServiceProvider::class,
-        GottaShit\Providers\RouteServiceProvider::class,
+        PokemonBuddy\Providers\AppServiceProvider::class,
+        PokemonBuddy\Providers\EventServiceProvider::class,
+        PokemonBuddy\Providers\RouteServiceProvider::class,
 
         /*
          * Third Party Providers
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
-        Dingo\Api\Provider\LaravelServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
     ],
