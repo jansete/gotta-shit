@@ -158,3 +158,14 @@ Route::get('/auth/{provider}/callback', [
     'as' => 'social_callback',
     'uses' => 'Auth\AuthController@handleProviderCallback'
 ])->where('provider', 'facebook|github|twitter');
+
+// API
+Route::group(['prefix' => 'api'], function () {
+
+  Route::group(['prefix' => 'v1'], function () {
+
+    Route::get('places',
+      ['as' => 'api_v1_places', 'uses' => 'APIController@getPlaces']);
+
+  });
+});

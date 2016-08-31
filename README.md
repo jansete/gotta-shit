@@ -10,6 +10,8 @@ https://github.com/jansete/pokemon-go-fast-scanner
 
 - Create webservice for expose places
 
+- Use Gmail smtp for send emails.
+
 - In Home show map with all markers.
 
 - All the maps must have all markers, but the current marker will have another color.
