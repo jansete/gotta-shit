@@ -1,5 +1,21 @@
 ## PokemonBuddy
 
+**Related Project**
+
+For execute background scanner:
+
+https://github.com/jansete/pokemon-go-fast-scanner
+
+**Next Steps**
+
+- Create webservice for expose places
+
+- In Home show map with all markers.
+
+- All the maps must have all markers, but the current marker will have another color.
+
+- When add new place, add posibility to only paste fastpokemap URL with latitude and longitude.
+
 # Travis for Master Branch
 
 [![Build Status](https://travis-ci.org/mmanzano/gotta-shit.svg?branch=master)](https://travis-ci.org/mmanzano/gotta-shit)
