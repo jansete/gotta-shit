@@ -35,6 +35,18 @@ $factory->defineAs(PokemonBuddy\Entities\User::class, 'admin', function ($faker)
     ];
 });
 
+$factory->defineAs(PokemonBuddy\Entities\User::class, 'admin_jansete', function ($faker) {
+    return [
+        'full_name' => 'Jansete Hansel',
+        'username' => 'jansete',
+        'email' => 'jansete@jansete.com',
+        'password' => bcrypt('secret'),
+        'verified' => true,
+        'remember_token' => str_random(10),
+        'language' => 'en',
+    ];
+});
+
 $factory->define(PokemonBuddy\Entities\Place::class, function ($faker) {
     $initialLat = 40.5;
     $initialLng = -3.7;

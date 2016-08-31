@@ -1,0 +1,1 @@
+<div class="place-map-render card" id="map-general"></div>

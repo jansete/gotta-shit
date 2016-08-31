@@ -11,9 +11,9 @@ return [
     |
     */
 
-    'site_name' => 'Gotta Shit',
+    'site_name' => 'Pokémon Buddy',
     'welcome' => "Welcome to Gotta Shit. You can start to evaluate the WC in your around when you <a class='disclaimer-link' href=':path'>Register</a>",
-    'footer_year' => '2015',
+    'footer_year' => '2016',
     'no_geolocation' => 'Geolocation is not supported by this browser.',
     'home' => '
         <p>Welcome to Gotta Shit!</p>

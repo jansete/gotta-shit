@@ -11,9 +11,9 @@ return [
     |
     */
 
-    'site_name' => 'Gotta Shit',
+    'site_name' => 'Pokémon Buddy',
     'welcome' => "Estás en Gotta Shit. Empieza a evaluar baños a tu alrededor cuando te <a class='disclaimer-link' href=':path'>Registres</a>",
-    'footer_year' => '2015',
+    'footer_year' => '2016',
     'no_geolocation' => 'Este navegador no soporta geolocalización.',
     'home' => '
         <p>¡Estás en Gotta Shit!</p>
