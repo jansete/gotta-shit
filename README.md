@@ -8,8 +8,6 @@ https://github.com/jansete/pokemon-go-fast-scanner
 
 **Next Steps**
 
-- Create webservice for expose places
-
 - Use Gmail smtp for send emails.
 
 - In Home show map with all markers.
@@ -17,14 +15,6 @@ https://github.com/jansete/pokemon-go-fast-scanner
 - All the maps must have all markers, but the current marker will have another color.
 
 - When add new place, add posibility to only paste fastpokemap URL with latitude and longitude.
-
-# Travis for Master Branch
-
-[![Build Status](https://travis-ci.org/mmanzano/gotta-shit.svg?branch=master)](https://travis-ci.org/mmanzano/gotta-shit)
-
-# Travis for Development Branch
-
-[![Build Status](https://travis-ci.org/mmanzano/gotta-shit.svg?branch=development)](https://travis-ci.org/mmanzano/gotta-shit)
 
 # Description
 
