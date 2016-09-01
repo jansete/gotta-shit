@@ -28,7 +28,7 @@ class Place extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = ['user_id', 'deleted_at', 'created_at', 'updated_at'];
 
     protected $dates = ['deleted_at'];
 
