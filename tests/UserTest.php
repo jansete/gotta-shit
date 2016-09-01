@@ -15,7 +15,7 @@ class UserTest extends TestCase
         $this->visit('/en/register')
             ->type('Got to shit', 'full_name')
             ->type('pokemonbuddy', 'username')
-            ->type('got2shit@gmail.com', 'email')
+            ->type('jansete@jansete.com', 'email')
             ->type('secret', 'password')
             ->type('secret', 'password_confirmation')
             ->press('Register');

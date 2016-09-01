@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => env('SES_EMAIL'), 'name' => 'PokemonBuddy'],
+    'from' => ['address' => env('MAIL_USERNAME'), 'name' => 'PokemonBuddy'],
 
     /*
     |--------------------------------------------------------------------------

@@ -65,7 +65,7 @@ class AppMailer
      */
     public function sendEmailConfirmationTo(User $user, $subject)
     {
-        $this->from = env('SES_EMAIL');
+        $this->from = env('MAIL_USERNAME');
         $this->to = $user->email;
         $this->view = 'emails.confirm';
         $path = route('user_register_confirm',
@@ -84,8 +84,8 @@ class AppMailer
      */
     public function sendPlaceAddNotification(User $user, Place $place, $subject)
     {
-        $this->from = env('SES_EMAIL');
-        $this->to = env('SES_EMAIL');
+        $this->from = env('MAIL_USERNAME');
+        $this->to = env('MAIL_USERNAME');
         $this->view = 'emails.notification.place';
         $path = route('place.show',
             ['language' => App::getLocale(), 'place' => $place->id]);
@@ -112,7 +112,7 @@ class AppMailer
         $subject
     ) {
         if (!$subscriber->modified) {
-            $this->from = env('SES_EMAIL');
+            $this->from = env('MAIL_USERNAME');
             $this->to = $subscriber->email;
             $this->view = 'emails.notification.comment';
             $path = route('place.show', [
