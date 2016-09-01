@@ -14,15 +14,6 @@
             <p class="user-label">{{ trans('pokemonbuddy.user.full_name')}}: <span class="user-data">{{ $user->full_name }}</span></p>
             <p class="user-label">{{ trans('pokemonbuddy.user.email')}}: <span class="user-data">{{ $user->email }}</span></p>
             <a class="button edit-user" href="{{ route('user.edit', ['language' => App::getLocale(), 'user' => $user->id]) }}">{{ trans('pokemonbuddy.user.edit_user') }}</a>
-            @if(is_null($user->facebook_id))
-                <a class="button edit-user" href="{{ route('social_login', ['provider' => 'facebook']) }}">{{ trans('pokemonbuddy.user.add_facebook') }}</a>
-            @endif
-            @if(is_null($user->twitter_id))
-                <a class="button edit-user" href="{{ route('social_login', ['provider' => 'twitter']) }}">{{ trans('pokemonbuddy.user.add_twitter') }}</a>
-            @endif
-            @if(is_null($user->github_id))
-                <a class="button edit-user" href="{{ route('social_login', ['provider' => 'github']) }}">{{ trans('pokemonbuddy.user.add_github') }}</a>
-            @endif
         @endif
 
         <p class="user-label">{{ trans('pokemonbuddy.user.number_of_places') }}: <span class="user-data">{{ $user->numberOfPlaces }}</span></p>

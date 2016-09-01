@@ -13,19 +13,6 @@
 
     <div class="forms">
 
-
-        <div>
-            <a class="button" href="{{ route('social_login', ['provider' => 'facebook']) }}">{{ trans('pokemonbuddy.user.login_facebook') }}</a>
-        </div>
-
-        <div>
-            <a class="button" href="{{ route('social_login', ['provider' => 'twitter']) }}">{{ trans('pokemonbuddy.user.login_twitter') }}</a>
-        </div>
-
-        <div>
-            <a class="button" href="{{ route('social_login', ['provider' => 'github']) }}">{{ trans('pokemonbuddy.user.login_github') }}</a>
-        </div>
-
         <form method="POST" action="{{ route('user_register', ['language' => App::getLocale()]) }}">
             {!! csrf_field() !!}
 
