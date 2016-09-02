@@ -8,7 +8,7 @@ https://github.com/jansete/pokemon-go-fast-scanner
 
 **Next Steps**
 
-- Use Gmail smtp for send emails.
+- Expire places in 5 hours and reactivate in author editor bar.
 
 - In Home show map with all markers.
 
