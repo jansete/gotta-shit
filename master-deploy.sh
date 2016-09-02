@@ -1,5 +1,5 @@
 #!/bin/sh
-chmod -R 770 storage
+chmod -R 777 storage
 composer install
 if [ ! -f key_generate ]; then
     php artisan key:generate
