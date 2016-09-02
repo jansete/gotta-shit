@@ -12,18 +12,18 @@ return [
     */
 
     'site_name' => 'Pokémon Buddy',
-    'welcome' => "Estás en Gotta Shit. Empieza a evaluar baños a tu alrededor cuando te <a class='disclaimer-link' href=':path'>Registres</a>",
+    'welcome' => "Estás en Pokémon Buddy - Gotta Shit. Empieza a añadir zonas de rastreo para escanear Pokemos magras cuando te <a class='disclaimer-link' href=':path'>Registres</a>",
     'footer_year' => '2016',
     'no_geolocation' => 'Este navegador no soporta geolocalización.',
     'home' => '
-        <p>¡Estás en Gotta Shit!</p>
+        <p>¡Estás en Pokémon Buddy - Gotta Shit!</p>
 
-        <p>¿Tienes que cagar?<br/>Este es el sitio web para ti.</p>
+        <p>¿Tienes que cagar? Pues te jodes, hay que cazar pokemos. <br/>Este es el sitio web para ti.</p>
 
         <p>Aquí podrás:</p>
 
         <ul>
-            <li>Buscar y encontrar los mejores sitios para cagar cerca</li>
+            <li>Buscar y encontrar las mejores zonas para cumplir tu sueño de maestro pokemos.</li>
             <li>Ver la puntuación de ese lugar</li>
             <li>Ver las opiniones de otros usuarios</li>
         </ul>
@@ -31,9 +31,9 @@ return [
         <p>Una vez te hayas registrado serás capaz de...</p>
 
         <ul>
-            <li>Añadir nuevos sitios para cagar</li>
-            <li>Opinar sobre ese sitio u otros</li>
-            <li>Puntuar los baños</li>
+            <li>Añadir nuevos zonas de escaneo</li>
+            <li>Opinar sobre esa zona u otras</li>
+            <li>Puntuar las zonas</li>
         </ul>
 
         <p>¡Regístrate y disfruta!</p>
@@ -58,10 +58,10 @@ return [
         'logout' => 'Desconecta',
         'register' => 'Regístrate',
         'add_place' => 'Añadir',
-        'user_places' => 'Tus baños',
+        'user_places' => 'Tus zonas',
         'all' => 'Todos',
-        'nearest' => 'Cercanos',
-        'best_places' => 'Mejores baños',
+        'nearest' => 'Zonas cercanas',
+        'best_places' => 'Mejores zonas',
         'profile' => 'Perfil',
         'es' => 'ES',
         'en' => 'EN',
@@ -70,12 +70,12 @@ return [
     ],
 
     'title' => [
-        'create_place' => 'Añade un baño',
+        'create_place' => 'Añade una zona',
         'edit_place' => 'Editar :place',
-        'user_places' => 'Tus Baños',
-        'best_places' => 'Mejores baños',
-        'nearest_places' => 'Baños más cercanos',
-        'all_places' => 'Todos los baños',
+        'user_places' => 'Tus zonas',
+        'best_places' => 'Mejores zonas',
+        'nearest_places' => 'Zonas más cercanos',
+        'all_places' => 'Todas las zonas',
         'welcome' => 'Bienvenido',
         'register' => 'Regístrate',
         'login' => 'Entra',
@@ -120,12 +120,12 @@ return [
         'my_location' => 'Localización actual',
         'latitude' => 'Latitud',
         'longitude' => 'Longitud',
-        'create_place' => 'Crear Sitio',
-        'edit_place' => 'Editar Sitio',
-        'update_place' => 'Actualizar Sitio',
-        'delete_place' => 'Borrar Sitio',
+        'create_place' => 'Crear Zona',
+        'edit_place' => 'Editar Zona',
+        'update_place' => 'Actualizar Zona',
+        'delete_place' => 'Borrar Zona',
         'delete_place_confirm' => '¿Está seguro?',
-        'delete_place_permanently' => 'Borrar Sitio Permanentemente',
+        'delete_place_permanently' => 'Borrar Zona Permanentemente',
         'restore_place' => 'Recuperar Sitio',
         'created_place' => ':place Creado',
         'updated_place' => ':place Actualizado',

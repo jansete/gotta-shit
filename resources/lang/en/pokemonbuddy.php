@@ -12,28 +12,28 @@ return [
     */
 
     'site_name' => 'Pokémon Buddy',
-    'welcome' => "Welcome to Gotta Shit. You can start to evaluate the WC in your around when you <a class='disclaimer-link' href=':path'>Register</a>",
+    'welcome' => "Welcome to Pokémon Buddy - Gotta Shit. You can start to add places for scanning Pokemos magras when you <a class='disclaimer-link' href=':path'>Register</a>",
     'footer_year' => '2016',
     'no_geolocation' => 'Geolocation is not supported by this browser.',
     'home' => '
-        <p>Welcome to Gotta Shit!</p>
+        <p>Welcome to Pokémon Buddy - Gotta Shit!</p>
 
-        <p>Have you got to take a shit? <br/>This is the right website for you.</p>
+        <p>Have you got to take a shit? Fuck you, it\'s pokemos time. <br/>This is the right website for you.</p>
 
         <p>Here you can:</p>
 
         <ul>
-            <li>Search and find the best sites to poo close to you</li>
-            <li>Check the shitty ratings of the spot</li>
+            <li>Search and find the best sites to reach your wet dreams of pokemos master.</li>
+            <li>Check the place ratings</li>
             <li>View opinions from other users</li>
         </ul>
 
         <p>Once you sign up you will be able to...</p>
 
         <ul>
-            <li>Add new places to take a shit</li>
+            <li>Add new places to scan pokemos</li>
             <li>Express yourself about the place</li>
-            <li>Rate toilets and comment on them</li>
+            <li>Rate places and comment on them</li>
         </ul>
 
         <p>Register now and join us!</p>
