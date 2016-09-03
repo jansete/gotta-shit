@@ -21,9 +21,9 @@ class PlaceController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth', ['only' => ['create', 'store', 'update', 'destroy', 'restore', 'placesForUser']]);
+        $this->middleware('auth', ['only' => ['create', 'store', 'update', 'destroy', 'restore', 'placesForUser', 'enable']]);
 
-        $this->middleware('isAuthor', ['only' => ['edit', 'activate']]);
+        $this->middleware('isAuthor', ['only' => ['edit', 'disable']]);
    }
 
     /**

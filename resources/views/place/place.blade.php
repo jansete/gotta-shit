@@ -65,11 +65,23 @@
               </button>
             </li>
           @else
-            <li>
-              <button class="button button-action" type="button">
-                {{ trans('pokemonbuddy.place.disabled') }}
-              </button>
-            </li>
+            @if(Auth::check())
+              <li>
+                <form method="post" action="{{ route('place.enable', ['language' => App::getLocale(), 'place' => $place->id]) }}">
+                  {!! csrf_field() !!}
+                  {!! method_field('PATCH') !!}
+                  <button class="button button-action button-enable-place" type="submit" id="enable-place-{{ $place->id }}">
+                    {{ trans('pokemonbuddy.place.enable_place') }}
+                  </button>
+                </form>
+              </li>
+            @else
+              <li>
+                <button class="button button-action" type="button">
+                  {{ trans('pokemonbuddy.place.disabled') }}
+                </button>
+              </li>
+            @endif
           @endif
         @endif
       </ul>
