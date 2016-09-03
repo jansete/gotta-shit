@@ -17,5 +17,5 @@ return [
     'confirmed' => 'You are now confirmed. Please login.',
     'failed' => 'These credentials do not match our records.',
     'logout' => 'You have now been signed out. See you.',
-    'login' => 'Welcome back! Start to evaluate others WC or add one.',
+    'login' => 'Welcome back! Start to evaluate others places or add one.',
 ];

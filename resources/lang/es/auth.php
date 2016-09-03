@@ -17,5 +17,5 @@ return [
     'confirmed' => 'Tu usuario está ahora confirmado. Por favor, entra.',
     'failed' => 'Estos valores no coinciden con ningún usuario o no has confirmado tu correo electrónico.',
     'logout' => '¡Nos vemos pronto! Gracias por todo.',
-    'login' => '¡Hola de nuevo! Comienza a evaluar baños de otros o añade cualquier otro.',
+    'login' => '¡Hola de nuevo! Comienza a evaluar zonas de otros o añade cualquier otra.',
 ];
