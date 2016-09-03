@@ -238,4 +238,9 @@ class Place extends Model
 
         return implode(':', [$remain_time->h, $remain_time->i, $remain_time->s]);
     }
+
+    public function getFastPokemapUrlAttribute()
+    {
+        return 'https://fastpokemap.se#' . $this->geo_lat . ',' . $this->geo_lng;
+    }
 }

@@ -12,6 +12,11 @@
   <div class="place-title">
     <div class="actions">
       <ul>
+        @if(Auth::check())
+          <li>
+            <a class="button button-action" href="{{$place->fast_pokemap_url}}" target="_blank">{{ trans('pokemonbuddy.place.show_pokemap') }}</a>
+          </li>
+        @endif
         @if($place->isAuthor)
           @if(! $place->trashed())
             <li>

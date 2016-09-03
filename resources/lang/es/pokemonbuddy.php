@@ -142,6 +142,7 @@ return [
         'update_place_not_allowed' => 'No puedes actualizar :place',
         'delete_place_not_allowed' => 'No puedes borrar :place',
         'restore_place_not_allowed' => 'No puedes recuperar :place',
+        'show_pokemap' => 'Ver PokeMap',
     ],
 
     'comment' => [

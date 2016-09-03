@@ -141,6 +141,7 @@ return [
         'update_place_not_allowed' => 'You are not allowed for update :place',
         'delete_place_not_allowed' => 'You are not allowed for delete :place',
         'restore_place_not_allowed' => 'You are not allowed for restore :place',
+        'show_pokemap' => 'Show PokeMap',
     ],
 
     'comment' => [

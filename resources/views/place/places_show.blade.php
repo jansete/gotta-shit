@@ -5,6 +5,11 @@
         <h2><a class="place-title-link-card" href="{{ route('place.show', ['language' => App::getLocale(), 'place' => $place->id]) }}" id="place-title-link-card-{{ $place->id }}">{{ str_limit($place->name, 14) }}</a></h2>
         <div class="card actions actions-card">
           <ul>
+            @if(Auth::check())
+              <li>
+                <a class="button button-card" href="{{$place->fast_pokemap_url}}" target="_blank">{{ trans('pokemonbuddy.place.show_pokemap') }}</a>
+              </li>
+            @endif
             @if($place->isAuthor)
               @if(! $place->trashed())
                 <li>
