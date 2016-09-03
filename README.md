@@ -8,8 +8,6 @@ https://github.com/jansete/pokemon-go-fast-scanner
 
 **Next Steps**
 
-- Expire places in 5 hours and reactivate in author editor bar.
-
 - In Home show map with all markers.
 
 - All the maps must have all markers, but the current marker will have another color.

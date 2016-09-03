@@ -23,7 +23,7 @@ class PlaceController extends Controller
     public function __construct(){
         $this->middleware('auth', ['only' => ['create', 'store', 'update', 'destroy', 'restore', 'placesForUser']]);
 
-        $this->middleware('isAuthor', ['only' => ['edit']]);
+        $this->middleware('isAuthor', ['only' => ['edit', 'activate']]);
    }
 
     /**
@@ -253,6 +253,38 @@ class PlaceController extends Controller
             return redirect(route('home',
                 ['language' => $language]))->with('status', $status_message);
         }
+    }
+
+    public function enable($language, $place_id) {
+        $this->setLanguage($language);
+
+        $place = Place::findOrFail($place_id);
+
+        $place->expire_at = Carbon::now()->addHours(5);
+
+        $place->save();
+
+        $status_message = trans('pokemonbuddy.place.enabled_place',
+          ['place' => $place->name]);
+
+        return back()->with('status',
+          $status_message);
+    }
+
+    public function disable($language, $place_id) {
+        $this->setLanguage($language);
+
+        $place = Place::findOrFail($place_id);
+
+        $place->expire_at = NULL;
+
+        $place->save();
+
+        $status_message = trans('pokemonbuddy.place.disabled_place',
+          ['place' => $place->name]);
+
+        return back()->with('status',
+          $status_message);
     }
 
     public function restore($language, $place_id)

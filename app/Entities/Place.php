@@ -2,6 +2,8 @@
 
 namespace PokemonBuddy\Entities;
 
+use Carbon\Carbon;
+use Faker\Provider\zh_TW\DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth as Auth;
@@ -30,7 +32,7 @@ class Place extends Model
      */
     protected $hidden = ['user_id', 'deleted_at', 'created_at', 'updated_at'];
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at', 'expire_at'];
 
     /**
      * A Place belongs to an User.
@@ -223,5 +225,17 @@ class Place extends Model
         }
 
         return $isSubscribed;
+    }
+
+    public function getIsActiveAttribute()
+    {
+        return $this->expire_at > Carbon::now();
+    }
+
+    public function getRemainTimeAttribute()
+    {
+        $remain_time = Carbon::now()->diff($this->expire_at);
+
+        return implode(':', [$remain_time->h, $remain_time->i, $remain_time->s]);
     }
 }

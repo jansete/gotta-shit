@@ -48,6 +48,12 @@ Route::group(['prefix' => '{language}'], function () {
     Route::post('place/{place}/restore',
       ['as' => 'place.restore', 'uses' => 'PlaceController@restore']);
 
+    Route::patch('place/{place}/enable',
+      ['as' => 'place.enable', 'uses' => 'PlaceController@enable']);
+
+    Route::delete('place/{place}/enable',
+      ['as' => 'place.enable', 'uses' => 'PlaceController@disable']);
+
     Route::resource('place.comment', 'CommentController', [
       'only' => [
         'store',

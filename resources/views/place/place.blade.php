@@ -10,10 +10,26 @@
   @endif
 
   <div class="place-title">
-    @if($place->isAuthor)
-      <div class="actions">
-        <ul>
+    <div class="actions">
+      <ul>
+        @if($place->isAuthor)
           @if(! $place->trashed())
+            <li>
+              <form method="post" action="{{ route('place.enable', ['language' => App::getLocale(), 'place' => $place->id]) }}">
+                {!! csrf_field() !!}
+                @if($place->is_active)
+                  {!! method_field('DELETE') !!}
+                  <button class="button button-action button-disable-place" type="submit" id="disable-place-{{ $place->id }}">
+                    {{ trans('pokemonbuddy.place.disable_place', ['remain_time' => $place->remain_time]) }}
+                  </button>
+                @else
+                  {!! method_field('PATCH') !!}
+                  <button class="button button-action button-enable-place" type="submit" id="enable-place-{{ $place->id }}">
+                    {{ trans('pokemonbuddy.place.enable_place') }}
+                  </button>
+                @endif
+              </form>
+            </li>
             <li>
               <a  class="button button-action" href="{{ route('place.edit', ['language' => App::getLocale(), 'place' => $place->id]) }}">{{ trans('pokemonbuddy.place.edit_place') }}</a>
             </li>
@@ -41,9 +57,23 @@
               </button>
             </form>
           </li>
-        </ul>
-      </div>
-    @endif
+        @else
+          @if($place->is_active)
+            <li>
+              <button class="button button-action" type="button">
+                {{ trans('pokemonbuddy.place.remain_time_place', ['remain_time' => $place->remain_time]) }}
+              </button>
+            </li>
+          @else
+            <li>
+              <button class="button button-action" type="button">
+                {{ trans('pokemonbuddy.place.disabled') }}
+              </button>
+            </li>
+          @endif
+        @endif
+      </ul>
+    </div>
     <h2>{{ $place->name }}</h2>
     @if(! $place->trashed())
       @if(Auth::check())
