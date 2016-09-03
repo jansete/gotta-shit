@@ -66,7 +66,8 @@ return [
         'es' => 'ES',
         'en' => 'EN',
         'menu' => 'Menú',
-        'menu_user' => 'Menú de usuario'
+        'menu_user' => 'Menú de usuario',
+        'active_places' => 'Zonas activas',
     ],
 
     'title' => [
@@ -81,6 +82,7 @@ return [
         'login' => 'Entra',
         'edit_user' => 'Editar :user',
         'user_profile' => 'Perfíl de :user',
+        'active_places' => 'Zonas activas',
     ],
 
     'user' => [

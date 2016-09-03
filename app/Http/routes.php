@@ -29,6 +29,10 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('place/user',
       ['as' => 'user_places', 'uses' => 'PlaceController@placesForUser']);
 
+    // Active Places
+    Route::get('place/actives',
+      ['as' => 'active_places', 'uses' => 'PlaceController@actives']);
+
     // Nearest Places
     Route::get('place/{lat}/{lng}/{distance}',
       ['as' => 'nearest_places', 'uses' => 'PlaceController@nearest']);

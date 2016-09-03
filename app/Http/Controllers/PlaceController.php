@@ -21,7 +21,7 @@ class PlaceController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth', ['only' => ['create', 'store', 'update', 'destroy', 'restore', 'placesForUser', 'enable']]);
+        $this->middleware('auth', ['only' => ['create', 'store', 'update', 'destroy', 'restore', 'placesForUser', 'enable', 'active']]);
 
         $this->middleware('isAuthor', ['only' => ['edit', 'disable']]);
    }
@@ -359,5 +359,17 @@ class PlaceController extends Controller
         $title = trans('pokemonbuddy.title.nearest_places');
 
         return view('places', compact('title', 'places'));
+    }
+
+    public function actives($language) {
+      $this->setLanguage($language);
+
+      $places = Place::where('expire_at', '>', Carbon::now())
+        ->orderBy('expire_at', 'desc')
+        ->paginate(8);
+
+      $title = trans('pokemonbuddy.title.active_places');
+
+      return view('places', compact('title', 'places'));
     }
 }

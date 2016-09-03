@@ -5,6 +5,10 @@
 
         <li><a href="{{ route('nearest_places', ['language' => App::getLocale(), 'lat' => 40.5, 'lng' => -3.7, 'distance' => 1000]) }}" id="nearest-place" style="display:none">{{ trans('pokemonbuddy.nav.nearest') }}</a></li>
 
+        @if(Auth::check())
+            <li><a href="{{ route('active_places', ['language' => App::getLocale()]) }}" id="active-places">{{ trans('pokemonbuddy.nav.active_places') }}</a></li>
+        @endif
+
         <li><a href="{{ route('place.index', ['language' => App::getLocale()]) }}">{{ trans('pokemonbuddy.nav.all') }}</a></li>
         <li><a href="{{ route('best_places', ['language' => App::getLocale()]) }}">{{ trans('pokemonbuddy.nav.best_places') }}</a></li>
 
