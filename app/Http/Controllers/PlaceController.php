@@ -70,7 +70,6 @@ class PlaceController extends Controller
             'name' => 'required|max:255',
             'geo_lat' => 'required|numeric|between:-90,90',
             'geo_lng' => 'required|numeric|between:-180,180',
-            'stars' => 'required|numeric|between:0,5',
         ]);
 
         $place = new Place();
@@ -81,14 +80,6 @@ class PlaceController extends Controller
         $place->user_id = Auth::user()->id;
 
         $place->save();
-
-        $star = new PlaceStar();
-
-        $star->place_id = $place->id;
-        $star->user_id = Auth::user()->id;
-        $star->stars = $request->input('stars');
-
-        $star->save();
 
         $subscription = new Subscription();
         $subscription->user_id = Auth::user()->id;
@@ -174,7 +165,6 @@ class PlaceController extends Controller
             'name' => 'required|max:255',
             'geo_lat' => 'required|numeric|between:-90,90',
             'geo_lng' => 'required|numeric|between:-180,180',
-            'stars' => 'required|numeric|between:0,5',
         ]);
 
         $place = Place::findOrFail($id);
@@ -185,22 +175,6 @@ class PlaceController extends Controller
             $place->geo_lng = number_format($request->input('geo_lng'), 6);
 
             $place->save();
-
-            $idStar = $place->id_of_user_star;
-
-            if ($idStar == 0) {
-                $star = new PlaceStar();
-
-                $star->place_id = $place->id;
-                $star->user_id = Auth::user()->id;
-            } else {
-                $star = PlaceStar::findOrFail($idStar);
-            }
-
-
-            $star->stars = $request->input('stars');
-
-            $star->save();
 
             $status_message = trans('pokemonbuddy.place.updated_place',
                 ['place' => $place->name]);

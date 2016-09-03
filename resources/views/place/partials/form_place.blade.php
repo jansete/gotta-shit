@@ -19,10 +19,3 @@
 <div>
     <input type="hidden" name="geo_lng"  @if(old('geo_lng') != "") value="{{ old('geo_lng') }}" @elseif(isset($place)) value="{{ $place->geo_lng }}" @endif id="geo_lng">
 </div>
-
-<div>
-    <label class="input-label" for="stars">
-        {{ ucfirst(trans('pokemonbuddy.star.stars')) }}
-    </label>
-    @include('place.partials.form_stars')
-</div>
