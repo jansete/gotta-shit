@@ -14,6 +14,16 @@ https://github.com/jansete/pokemon-go-fast-scanner
 
 - When add new place, add posibility to only paste fastpokemap URL with latitude and longitude.
 
+- Schedule activation: define time when scanning start. Only one schedule by place.
+
+- Register who user activate a place.
+
+- Other sections:
+
+- - My common places: All sites that you have activated order by activated times desc.
+
+- Add countdown.js to time left.
+
 # Description
 
 A little application in Laravel to mark the best sites to shit.
