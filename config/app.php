@@ -143,6 +143,7 @@ return [
         PokemonBuddy\Providers\AppServiceProvider::class,
         PokemonBuddy\Providers\EventServiceProvider::class,
         PokemonBuddy\Providers\RouteServiceProvider::class,
+        \PokemonBuddy\Providers\ValidatorServiceProvider::class,
 
         /*
          * Third Party Providers
